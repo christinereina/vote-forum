@@ -1,4 +1,29 @@
+# <h1 align = "center"> Forum 
+
+<div align="center">
+
+![App Wireframe](img/FORUM.png)
+</div>
+
+##### <h4 align = "center">  React with Redux - Vote-Based Discussion Forum, Three-Day Project for Epicodus, 09.15.2020
+
+#### <h4 align = "center"> By _**Kevin Davis, Taylor Phillips, Sean Downs, Christine Augustine**_
+
+---
+
+## Description
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## User Stories
+
+* As a user, I want to enter content into a form and submit to create a new post.
+* As a user, I want my new posts to include a timestamp. Other posts will have a timestamp as well. 
+* As a user, I want to upvote posts I particularly enjoy.
+* As a user, I want to downvote posts I don't like, or find inappropriate.
+
+## Setup/Installation Requirements
+
 
 ## Available Scripts
 
@@ -37,32 +62,31 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Known Bugs
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+* n/a
 
-### Code Splitting
+## Support and contact details
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+* Kevin Davis
+* Taylor Phillips
+* Sean Downs
+* Christine Augustine
 
-### Analyzing the Bundle Size
+## Technologies Used
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-### Making a Progressive Web App
+* React
+* Javascript
+* Webpack
+* Node.js
+* HTML & CSS
+* Bootstrap 4
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+### License
 
-### Advanced Configuration
+Copyright (c) 2020 **_Kevin Davis, Taylor Phillips, Sean Downs, Christine Augustine_**
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+This software is licensed under the MIT license.
