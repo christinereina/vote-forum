@@ -1,15 +1,15 @@
 # <h1 align = "center"> Forum 
 
+##### <h4 align = "center"> Vote-Based Discussion Forum, Three-Day React with Redux Project for Epicodus, 09.15.2020
+
 <div align="center">
 
-![App Wireframe](img/FORUM.png)
+![App Wireframe](img/FORUM.png)*App Wireframe*
 </div>
 
-##### <h4 align = "center">  React with Redux - Vote-Based Discussion Forum, Three-Day Project for Epicodus, 09.15.2020
+#### <h4 align = "center"> By _**Kevin Davis, Taylor Phillips, Sean Downs, Christine Augustine, JohnNils Olson**_
 
-#### <h4 align = "center"> By _**Kevin Davis, Taylor Phillips, Sean Downs, Christine Augustine**_
-
----
+----
 
 ## Description
 
@@ -87,6 +87,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### License
 
-Copyright (c) 2020 **_Kevin Davis, Taylor Phillips, Sean Downs, Christine Augustine_**
+Copyright (c) 2020 **_Kevin Davis, Taylor Phillips, Sean Downs, Christine Augustine, JohnNils Olson_**
 
 This software is licensed under the MIT license.
