@@ -5,9 +5,8 @@ function Post(props){
   return (
     <React.Fragment>
       <div onClick = {() => props.whenPostClicked(props.Id)}>
-        <img href="/">USER_ICON</img>
         <h2>{props.postTitle}</h2>
-        <h3>{props.postAuthor} - {post.postStamp}</h3>
+        <h3>{props.postAuthor} - {props.postStamp}</h3>
         <p>{props.postPeek}</p>
         <button onClick= {() => props.whenUpVoted(props.postVote)}>+</button>
         <button onClick= {() => props.whenDownVoted(props.postVote)}>-</button>
@@ -17,11 +16,15 @@ function Post(props){
 }
 
 Post.propTypes = {
-  postTitle: PropTypes.string,
+  postTitle: PropTypes.string.isRequired,
   postAuthor: PropTypes.string,
-  postStamp: PropTypes.instanceOf(Date),
+  postStamp: PropTypes.string,
   postPeek: PropTypes.string,
-  postVote: PropTypes.number
+  postVote: PropTypes.number,
+  postId: PropTypes.string,
+  whenUpVoted: PropTypes.func,
+  whenDownVoted: PropTypes.func,
+  whenPostClicked: PropTypes.func
 }
 
 export default Post;

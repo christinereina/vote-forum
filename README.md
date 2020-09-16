@@ -1,13 +1,13 @@
 # <h1 align = "center"> Forum 
 
-##### <h4 align = "center"> Vote-Based Discussion Forum, Three-Day React with Redux Project for Epicodus, 09.15.2020
+##### <h3 align = "center"> Vote-Based Discussion Forum, Three-Day React with Redux Project for Epicodus, 09.15.2020 </h3>
 
 <div align="center">
 
 ![App Wireframe](img/FORUM.png)*App Wireframe*
 </div>
 
-#### <h4 align = "center"> By _**Kevin Davis, Taylor Phillips, Sean Downs, Christine Augustine, JohnNils Olson**_
+#### <h4 align = "center"> By _**Kevin Davis, Taylor Phillips, Sean Downs, Christine Augustine, JohnNils Olson**_</h4>
 
 ----
 
@@ -18,7 +18,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## User Stories
 
 * As a user, I want to enter content into a form and submit to create a new post.
-* As a user, I want my new posts to include a timestamp. Other posts will have a timestamp as well. 
+* As a user, I want my new posts to include a timestamp. Other posts will have a timestamp as well.
 * As a user, I want to upvote posts I particularly enjoy.
 * As a user, I want to downvote posts I don't like, or find inappropriate.
 
@@ -61,7 +61,6 @@ If you aren’t satisfied with the build tool and configuration choices, you can
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
 
 ## Known Bugs
 

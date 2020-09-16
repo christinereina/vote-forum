@@ -1,16 +1,16 @@
 import React from 'react';
-import NewPostForm from './NewPostForm';
+import PostAdd from './PostAdd';
 import PostList from './PostList';
 import PostDetail from './PostDetail';
-import EditPostForm from ',/EditPostForm'
-
-
+import EditPostForm from './EditPostForm'
 
 class PostControl extends React.Component {
 
   constructor(props) {
     super(props);
     this.state = {
+      formVisibleOnPage: false,
+      masterList: [],
       selectedPost: null,
       editing: false
     };
@@ -19,7 +19,7 @@ class PostControl extends React.Component {
   handleClick = () => {
 
     if (this.state.selectedPost != null) {
-      this.ssetState({
+      this.setState({
         formVisibleOnPage: false,
         selectedPost: null,
         editing: false
@@ -39,11 +39,10 @@ class PostControl extends React.Component {
     });
   }
 
-  handleViewingPost = (id) => {
-    const newMasterList = this.state.masterList.filter(post => post.id === id)[0];
+  handleViewingPost = (postId) => {
+    const selectedPost = this.state.masterList.filter(post => post.postId === postId)[0];
     this.setState({
-      masterList: newMasterList,
-      selectdPost: null
+      selectedPost: selectedPost
     });
   }
 
@@ -52,10 +51,24 @@ class PostControl extends React.Component {
   }
 
   handleEditingPost = (postToEdit) => {
-    const newMasterList = this.state.masterList.filter(post => post.id !== this.state.selectedPost.id).concat(postToEdit);
+    const editedMasterList = this.state.masterList.map(posts => {
+      if (postToEdit.postId === posts.postId) {
+        return postToEdit;
+      } else {
+        return posts;
+      }
+    });
+    this.setState({
+      masterList: editedMasterList,
+      currentPost: 'PostList',
+      selectedPost: postToEdit
+    });
+  }
+
+  handleDeletingPost = (postId) => {
+    const newMasterList = this.state.masterList.filter(post => post.postId !== postId);
     this.setState({
       masterList: newMasterList,
-      editing: false,
       selectedPost: null
     });
   }
@@ -68,15 +81,15 @@ class PostControl extends React.Component {
         post = {this.state.selectedPost}
         onEditPost = {this.handleEditingPost} />;
         buttonText = "Return to Forum";
-    } else if (this.state.selectedPost != null) {
+    } else if (this.state.selectedPost !== null) {
       currentlyVisibleState = <PostDetail
         post = {this.state.selectedPost}
         onClickingDelete = {this.handleDeletingPost}
         onClickingEdit = {this.handleEditClick} />;
         buttonText = "Return to Forum";
     } else if (this.state.formVisibleOnPage) {
-      currentlyVisibleState = <NewPostForm
-        onNewPostCreation = {this.handleAddingNewPost} />;
+      currentlyVisibleState = <PostAdd
+        onPostAdd = {this.handleAddingNewPost} />;
         buttonText = "Return to Forum";
     } else {
       currentlyVisibleState = <PostList
