@@ -18,7 +18,7 @@ const getDate = function(str, func) {
 }
 
 function PostDetail(props) {
-  const { post, onClickingEdit, onClickingDelete } = props;
+  const { post, onClickingDelete } = props;
 
   return (
     <React.Fragment>

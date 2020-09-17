@@ -12,7 +12,8 @@ class PostControl extends React.Component {
       formVisibleOnPage: false,
       masterList: [],
       selectedPost: null,
-      editing: false
+      editing: false,
+      postVote: 0
     };
   }
 
@@ -68,9 +69,22 @@ class PostControl extends React.Component {
     });
   }
 
+  // upVote() {
+  //   this.setState({
+  //     count: this.state.masterList.postVote + 1
+  //   });
+  // };
+  // downVote() {
+  //   this.setState({
+  //     count: this.state.masterList.postVote -1
+  //   });
+  // };
+
   render(){
     let currentlyVisibleState = null;
     let buttonText = null;
+    
+    
     if (this.state.editing) {
       currentlyVisibleState = <EditPostForm
         post = {this.state.selectedPost}

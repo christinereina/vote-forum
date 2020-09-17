@@ -6,12 +6,13 @@ function Post(props){
     <React.Fragment>
       <div onClick = {() => props.whenPostClicked(props.postId)}>
         <h2>{props.postTitle}</h2>
-        <h3>{props.postAuthor} - {props.postStamp}</h3>
+        <h3>Posted by: {props.postAuthor} | {props.postStamp}</h3>
         <p>{props.postPeek}</p>
-        <button onClick= {() => props.whenUpVoted(props.postVote)}>+</button>
-        <button onClick= {() => props.whenDownVoted(props.postVote)}>-</button>
-      </div>
-    </React.Fragment>   
+        </div>
+        <button onClick= {() => props.upVote(props.postVote)}>+</button>
+        <button onClick= {() => props.downVote(props.postVote)}>-</button>
+        <p>Votes: {props.postVote}</p>
+    </React.Fragment>
   );
 }
 
@@ -22,8 +23,8 @@ Post.propTypes = {
   postPeek: PropTypes.string,
   postVote: PropTypes.number,
   postId: PropTypes.string,
-  whenUpVoted: PropTypes.func,
-  whenDownVoted: PropTypes.func,
+  upVote: PropTypes.func,
+  downVote: PropTypes.func,
   whenPostClicked: PropTypes.func
 }
 
