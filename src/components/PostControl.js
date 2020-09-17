@@ -33,6 +33,7 @@ class PostControl extends React.Component {
 
   handleAddingNewPost = (newPost) => {
     const newMasterList = this.state.masterList.concat(newPost);
+    console.log(newMasterList);
     this.setState({
       masterList: newMasterList,
       formVisibleOnPage: false
@@ -51,22 +52,16 @@ class PostControl extends React.Component {
   }
 
   handleEditingPost = (postToEdit) => {
-    const editedMasterList = this.state.masterList.map(posts => {
-      if (postToEdit.postId === posts.postId) {
-        return postToEdit;
-      } else {
-        return posts;
-      }
-    });
+    const editedMasterList = this.state.masterList.filter((post) => post.postId !== this.state.selectedPost.postId).concat(postToEdit);
     this.setState({
       masterList: editedMasterList,
-      currentPost: 'PostList',
-      selectedPost: postToEdit
+      editing: false,
+      selectedPost: null
     });
   }
 
   handleDeletingPost = (postId) => {
-    const newMasterList = this.state.masterList.filter(post => post.postId !== postId);
+    const newMasterList = this.state.masterList.filter((post) => post.postId !== postId);
     this.setState({
       masterList: newMasterList,
       selectedPost: null
@@ -84,7 +79,7 @@ class PostControl extends React.Component {
     } else if (this.state.selectedPost !== null) {
       currentlyVisibleState = <PostDetail
         post = {this.state.selectedPost}
-        onClickingDelete = {this.handleDeletingPost}
+        onClickingDelete = {this.handleDeletingPost}    
         onClickingEdit = {this.handleEditClick} />;
         buttonText = "Return to Forum";
     } else if (this.state.formVisibleOnPage) {

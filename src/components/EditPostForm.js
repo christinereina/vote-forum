@@ -30,7 +30,7 @@ function EditPostForm(props) {
 }
 
 EditPostForm.propTypes = {
-  // post: PropTypes.object,
+  post: PropTypes.object,
   onEditPost: PropTypes.func
 };
 

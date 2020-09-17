@@ -18,7 +18,7 @@ const getDate = function(str, func) {
 }
 
 function PostDetail(props) {
-  const { post, onClickingDelete } = props;
+  const { post, onClickingEdit, onClickingDelete } = props;
 
   return (
     <React.Fragment>
@@ -28,7 +28,7 @@ function PostDetail(props) {
       <p>{post.postVote}<br />
       {post.postBody}</p>
       <button onClick={ props.onClickingEdit }>Update Post</button>
-      <button onClick={()=> onClickingDelete(post.id) }>Delete Post</button>
+      <button onClick={()=> onClickingDelete(post.postId) }>Delete Post</button>
       <hr/>
     </React.Fragment>
   );
